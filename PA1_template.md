@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 ## Loading and preprocessing the data
 
@@ -97,7 +102,7 @@ barplot(dailySteps$steps, names.arg = dailySteps$date, main="Number of Steps per
         xlab="Date", ylab="Steps", col = "blue", space=c(0)) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 ### 3 - Calculate and report the mean and median of the total number of steps taken per day
 Mean of the total number of steps taken per day
@@ -134,7 +139,7 @@ stepsInterval <- aggregate(steps ~ interval, data = originalData, FUN = mean)
 plot(stepsInterval, type = "l", col = "blue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 ### 2- Show Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -212,7 +217,7 @@ barplot(fullSteps$steps, names.arg = fullSteps$date, main="Number of Steps per D
         xlab="Date", ylab="Steps", col = "blue", space=c(0)) 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
 
 The impact of the missing data filled with mean seems low when estimating the total number of steps per day.
 
@@ -305,7 +310,7 @@ xyplot(steps ~ interval | daytype, stepsIntervalDaytype, layout = c(1, 2),
        main = "Average steps pattern by weekend/weekdays")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png) 
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png) 
 
 
 
